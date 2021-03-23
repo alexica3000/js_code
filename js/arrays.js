@@ -49,7 +49,7 @@ function myFunc(total, num) {
     return total - num;
 }
 
-var numbers3 = [15.5, 2.3, 1.1, 4.7];
+let numbers3 = [15.5, 2.3, 1.1, 4.7];
 
 function getSum(total, num) {
     return total + Math.round(num);
@@ -57,6 +57,9 @@ function getSum(total, num) {
 
 numbers3.reduce(getSum, 0); // 24
 
+const array = [1, 2, 3, 4, 5];
+array.reduce((accumulator, currentElement) => accumulator + currentElement, 0); // 15
+array.reduce((accumulator, currentElement) => accumulator + currentElement, 2); // 17
 
 /*
 * find()
