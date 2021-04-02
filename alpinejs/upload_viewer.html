@@ -1,0 +1,43 @@
+<div x-data="imageViewer()">
+    <div class="mb-2">
+        <!-- Show the image -->
+        <template x-if="imageUrl">
+            <img :src="imageUrl"
+                 class="object-cover rounded border border-gray-200"
+                 style="width: 100px; height: 100px;"
+            >
+        </template>
+
+        <!-- Show the gray box when image is not available -->
+        <template x-if="!imageUrl">
+            <div
+                class="border rounded border-gray-200 bg-gray-100"
+                style="width: 100px; height: 100px;"
+            ></div>
+        </template>
+
+        <input class="mt-2" type="file" accept="image/*" @change="fileChosen">
+    </div>
+</div>
+
+<script>
+    function imageViewer() {
+        return {
+            imageUrl: '',
+
+            fileChosen(event) {
+                this.fileToDataUrl(event, src => this.imageUrl = src)
+            },
+
+            fileToDataUrl(event, callback) {
+                if (! event.target.files.length) return;
+
+                let file = event.target.files[0];
+                let reader = new FileReader();
+
+                reader.readAsDataURL(file)
+                reader.onload = e => callback(e.target.result)
+            },
+        }
+    }
+</script>
