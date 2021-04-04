@@ -1,2 +1,2 @@
-# js_code
-js code example
+# web-code-demo
+web code demo examples
