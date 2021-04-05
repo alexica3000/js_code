@@ -1,0 +1,128 @@
+/*not like this*/
+.item {
+    margin-right: 1rem;
+}
+
+.item:last-child {
+    margin-right: 0;
+}
+
+/*but*/
+.item:not(:last-child) {
+    margin-right: 1rem;
+}
+/*or*/
+.item:nth-child(n+2) {
+    margin-left: 1rem;
+}
+/*or*/
+.item + .item {
+    margin-left: 1rem;
+}
+
+/*****************************************/
+/*not like this - add display: block for elements with position: absolute or position: fixed*/
+.button::before {
+    content: "";
+    display: block;
+    position: absolute;
+}
+/*or*/
+.button::before {
+    content: "";
+    display: block;
+    position: fixed;
+}
+
+/*but*/
+.button::before {
+    content: "";
+    position: absolute;
+}
+/*or*/
+.button::before {
+    content: "";
+    position: fixed;
+}
+
+/*****************************************/
+/*not like this - use transform: translate (-50%, -50%) to center*/
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*but*/
+.parent {
+    display: flex;
+}
+
+.child {
+    margin: auto;
+}
+
+/*****************************************/
+/*not like this - use width: 100% for block elements*/
+/*
+<div class="parent">
+   <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+</div>
+*/
+ .parent {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+.child {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .child {
+        width: 25%;
+    }
+}
+
+/*but*/
+/*
+<div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+</div>
+*/
+@media (min-width: 1024px) {
+    .parent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        width: 25%;
+    }
+}
+
+/*****************************************/
+/*not like this - set display: block for flex items*/
+.parent {
+    display: flex;
+}
+
+.child {
+    display: block;
+}
+
+/*but*/
+.parent {
+    display: flex;
+}
