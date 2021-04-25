@@ -17,7 +17,4 @@
 ```$ npm install react-dom```  
 ```$ npm install react-router-dom```  
 
-![commands](img/commands.jpg "Commands")
-
-<img src="img/commands.jpg" alt="Commands" style="margin: 15px;"/>
-
+[![commands](img/commands.jpg "Commands")](#)
