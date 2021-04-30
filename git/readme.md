@@ -25,7 +25,15 @@
 
 ```$ git tag -a v1.0 -m “v1.0”```  
 ```$ git tag v1.0 ```  
+
+#### logs
+
 ```$ git log --pretty=oneline```  
+
+#### reset local repository
+
+```$ git fetch origin```  
+```$ git reset --hard origin/master```  
 
 #### git config
 
