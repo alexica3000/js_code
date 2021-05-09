@@ -48,3 +48,7 @@
 #### remove from public repository
 
 ```$ git rm --cached -r folder/name/of/file```  
+
+#### chmod ignore
+
+```$ git config core.fileMode false```
