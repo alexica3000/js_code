@@ -1,9 +1,9 @@
-- Find related IDs on a BelongsToMany Relationship
+#### Find related IDs on a BelongsToMany Relationship
 ```
 $user->roles()->allRelatedIds()->toArray();
 ```
 
-- Model Keys
+#### Model Keys
 ```
 User::all()->pluck('id')->toArray();
 
@@ -12,7 +12,7 @@ User::all()->pluck('id')->toArray();
 User::all()->modelKeys();
 ```
 
-- throw_if()
+#### throw_if()
 
 ```
 throw_if(
@@ -21,7 +21,7 @@ throw_if(
 );
 ```
 
-- Request exists() vs has()
+#### Request exists() vs has()
 ```
 // http://example.com?popular
 
@@ -34,7 +34,7 @@ $request->exists('popular') // true
 $request->has('popular') // true
 ```
 
-- @forelse
+#### @forelse
 
 ```
 @forelse ($users as $user)
@@ -44,7 +44,7 @@ $request->has('popular') // true
 @endforelse
 ```
 
-- optional()
+#### optional()
 
 ```
 // User 1 exists, with account
