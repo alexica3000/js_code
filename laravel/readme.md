@@ -24,3 +24,5 @@
 [Laravel Examples](https://laravelexamples.com/)
 
 [Laravel Artisan Cheatsheet](https://artisan.page/)
+
+[Tips laravel](https://github.com/LaravelDaily/laravel-tips)
